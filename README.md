@@ -1,6 +1,6 @@
 #**ACC_REPO_SYS** ---- An Accident Reporting System 
 
-ChatGPT
+
 Revised Project Summary:
 
 This project is a repository system for managing accidents, where users can add new accident records, and administrators have additional functionalities to view, update, and delete accident records. Users are required to log in to add accident records, while administrators have access to the full range of functionalities.
