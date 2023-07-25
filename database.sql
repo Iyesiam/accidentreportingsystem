@@ -13,7 +13,11 @@
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=5.1.1">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=5.1.1">
     <link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=5.1.1">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.1&nocache=4246939489ltr&server=1">
+=======
+    <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/theme.css?v=5.1.1&nocache=520355411ltr&server=1">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
     <link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=5.1.1" media="print" id="printcss">
     <title>localhost / 127.0.0.1 | phpMyAdmin 5.1.1</title>
     <script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=5.1.1"></script>
@@ -34,7 +38,11 @@
   <script data-cfasync="false" type="text/javascript" src="js/dist/rte.js?v=5.1.1"></script>
   <script data-cfasync="false" type="text/javascript" src="js/vendor/tracekit.js?v=5.1.1"></script>
   <script data-cfasync="false" type="text/javascript" src="js/dist/error_report.js?v=5.1.1"></script>
+<<<<<<< HEAD
   <script data-cfasync="false" type="text/javascript" src="js/messages.php?l=en&v=5.1.1&lang=en"></script>
+=======
+  <script data-cfasync="false" type="text/javascript" src="js/messages.php?l=en&v=5.1.1"></script>
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
   <script data-cfasync="false" type="text/javascript" src="js/dist/config.js?v=5.1.1"></script>
   <script data-cfasync="false" type="text/javascript" src="js/dist/doclinks.js?v=5.1.1"></script>
   <script data-cfasync="false" type="text/javascript" src="js/dist/functions.js?v=5.1.1"></script>
@@ -160,7 +168,11 @@ function extendingValidatorMessages () {
   });
 }
 
+<<<<<<< HEAD
 CommonParams.setAll({common_query:"lang=en",opendb_url:"index.php?route=/database/structure&lang=en",lang:"en",server:"1",table:"",db:"",token:"554160322f49212b3e553e3f5d29412b",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Browse",pma_text_left_default_tab:"Structure",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.1.1",auth_type:"config",user:"root"});
+=======
+CommonParams.setAll({common_query:"",opendb_url:"index.php?route=/database/structure",lang:"en",server:"1",table:"",db:"",token:"5c6641635a267d6156455e767d473a6e",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Browse",pma_text_left_default_tab:"Structure",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.1.1",auth_type:"config",user:"root"});
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
 ConsoleEnterExecutes=false
 
 AJAX.scriptHandler
@@ -236,15 +248,25 @@ $(function() {
       <div id="pma_navigation_header">
 
                   <div id="pmalogo">
+<<<<<<< HEAD
                           <a href="index.php?lang=en">
+=======
+                          <a href="index.php">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
                                       <img id="imgpmalogo" src="./themes/pmahomme/img/logo_left.png" alt="phpMyAdmin">
                                       </a>
                       </div>
         
         <div id="navipanellinks">
+<<<<<<< HEAD
           <a href="index.php?route=/&lang=en" title="Home"><img src="themes/dot.gif" title="Home" alt="Home" class="icon ic_b_home"></a>
 
                       <a class="logout disableAjax" href="index.php?route=/logout&lang=en" title="Empty session data"><img src="themes/dot.gif" title="Empty session data" alt="Empty session data" class="icon ic_s_loggoff"></a>
+=======
+          <a href="index.php?route=/" title="Home"><img src="themes/dot.gif" title="Home" alt="Home" class="icon ic_b_home"></a>
+
+                      <a class="logout disableAjax" href="index.php?route=/logout" title="Empty session data"><img src="themes/dot.gif" title="Empty session data" alt="Empty session data" class="icon ic_s_loggoff"></a>
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
           
           <a href="./doc/html/index.html" title="phpMyAdmin documentation" target="_blank" rel="noopener noreferrer"><img src="themes/dot.gif" title="phpMyAdmin documentation" alt="phpMyAdmin documentation" class="icon ic_b_docs"></a>
 
@@ -260,7 +282,11 @@ $(function() {
       </div>
       <div id="pma_navigation_tree" class="list_container synced highlight autoexpand">
 
+<<<<<<< HEAD
   <div class="pma_quick_warp"><div class="drop_list"><button title="Recent tables" class="drop_button btn">Recent</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=a_repo_sys&table=accidents&lang=en">`a_repo_sys`.`accidents`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=a_repo_sys&table=users&lang=en">`a_repo_sys`.`users`</a></li></ul></div><div class="drop_list"><button title="Favorite tables" class="drop_button btn">Favorites</button><ul id="pma_favorite_list"><li class="warp_link">There are no favorite tables.</li></ul></div><div class="clearfloat"></div></div>
+=======
+  <div class="pma_quick_warp"><div class="drop_list"><button title="Recent tables" class="drop_button btn">Recent</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=a_repo_sys&table=users">`a_repo_sys`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=a_repo_sys&table=accidents">`a_repo_sys`.`accidents`</a></li></ul></div><div class="drop_list"><button title="Favorite tables" class="drop_button btn">Favorites</button><ul id="pma_favorite_list"><li class="warp_link">There are no favorite tables.</li></ul></div><div class="clearfloat"></div></div>
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
 
 <div class="clearfloat"></div>
 
@@ -273,7 +299,11 @@ $(function() {
 
 <div id='pma_navigation_tree_content'>
   <ul>
+<<<<<<< HEAD
     <li class="first new_database italics"><div class='block'><i class='first'></i></div><div class="block second"><a href='index.php?route=/server/databases&server=1&lang=en'><img src="themes/dot.gif" title="" alt="" class="icon ic_b_newdb"></a></div><a class='hover_show_full' href='index.php?route=/server/databases&server=1&lang=en' title='New'>New</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.YV9yZXBvX3N5cw==" data-vpath="cm9vdA==.YV9yZXBvX3N5cw==" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&lang=en&amp;server=1&amp;db=a_repo_sys&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&lang=en&server=1&amp;db=a_repo_sys' title='Structure'>a_repo_sys</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-vpath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&lang=en&amp;server=1&amp;db=information_schema&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&lang=en&server=1&amp;db=information_schema' title='Structure'>information_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.bXlzcWw=" data-vpath="cm9vdA==.bXlzcWw=" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&lang=en&amp;server=1&amp;db=mysql&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&lang=en&server=1&amp;db=mysql' title='Structure'>mysql</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-vpath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&lang=en&amp;server=1&amp;db=performance_schema&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&lang=en&server=1&amp;db=performance_schema' title='Structure'>performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.cGhwbXlhZG1pbg==" data-vpath="cm9vdA==.cGhwbXlhZG1pbg==" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&lang=en&amp;server=1&amp;db=phpmyadmin&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&lang=en&server=1&amp;db=phpmyadmin' title='Structure'>phpmyadmin</a><div class="clearfloat"></div></li><li class="last database"><div class='block'><i></i><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.dGVzdA==" data-vpath="cm9vdA==.dGVzdA==" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&lang=en&amp;server=1&amp;db=test&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&lang=en&server=1&amp;db=test' title='Structure'>test</a><div class="clearfloat"></div></li>
+=======
+    <li class="first new_database italics"><div class='block'><i class='first'></i></div><div class="block second"><a href='index.php?route=/server/databases&server=1'><img src="themes/dot.gif" title="" alt="" class="icon ic_b_newdb"></a></div><a class='hover_show_full' href='index.php?route=/server/databases&server=1' title='New'>New</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.YV9yZXBvX3N5cw==" data-vpath="cm9vdA==.YV9yZXBvX3N5cw==" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&amp;server=1&amp;db=a_repo_sys&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&server=1&amp;db=a_repo_sys' title='Structure'>a_repo_sys</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-vpath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&amp;server=1&amp;db=information_schema&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&server=1&amp;db=information_schema' title='Structure'>information_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.bXlzcWw=" data-vpath="cm9vdA==.bXlzcWw=" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&amp;server=1&amp;db=mysql&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&server=1&amp;db=mysql' title='Structure'>mysql</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-vpath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&amp;server=1&amp;db=performance_schema&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&server=1&amp;db=performance_schema' title='Structure'>performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.cGhwbXlhZG1pbg==" data-vpath="cm9vdA==.cGhwbXlhZG1pbg==" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&amp;server=1&amp;db=phpmyadmin&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&server=1&amp;db=phpmyadmin' title='Structure'>phpmyadmin</a><div class="clearfloat"></div></li><li class="last database"><div class='block'><i></i><a class="expander" href='#'><span class="hide paths_nav" data-apath="cm9vdA==.dGVzdA==" data-vpath="cm9vdA==.dGVzdA==" data-pos="0""></span><img src="themes/dot.gif" title="Expand/Collapse" alt="Expand/Collapse" class="icon ic_b_plus"></a></div><div class="block second"><a href='index.php?route=/database/operations&amp;server=1&amp;db=test&amp;'><img src="themes/dot.gif" title="Database operations" alt="Database operations" class="icon ic_s_db"></a></div><a class='hover_show_full' href='index.php?route=/database/structure&server=1&amp;db=test' title='Structure'>test</a><div class="clearfloat"></div></li>
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
   </ul>
 </div>
 
@@ -281,10 +311,17 @@ $(function() {
       </div>
 
       <div id="pma_navi_settings_container">
+<<<<<<< HEAD
                   <div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="index.php?route=%2Fexport&server=1&lang=en" class="config-form disableAjax">
   <input type="hidden" name="tab_hash" value="">
       <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="">
     <input type="hidden" name="lang" value="en"><input type="hidden" name="token" value="554160322f49212b3e553e3f5d29412b">
+=======
+                  <div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="index.php?route=%2Fexport&server=1" class="config-form disableAjax">
+  <input type="hidden" name="tab_hash" value="">
+      <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="">
+    <input type="hidden" name="token" value="5c6641635a267d6156455e767d473a6e">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
   <input type="hidden" name="submit_save" value="Navi">
 <ul class="tabs responsivetable row">
       <li><a href="#Navi_panel">Navigation panel</a></li>
@@ -438,7 +475,11 @@ $.extend(defaultValues, {
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
       <img src="themes/dot.gif" title="" alt="" class="icon ic_s_host">
+<<<<<<< HEAD
       <a href="index.php?route=/&lang=en" data-raw-text="127.0.0.1">
+=======
+      <a href="index.php?route=/" data-raw-text="127.0.0.1">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
         Server:        127.0.0.1
       </a>
     </li>
@@ -453,62 +494,110 @@ $.extend(defaultValues, {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul id="topmenu" class="navbar-nav">
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/databases&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/databases">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Databases" alt="Databases" class="icon ic_s_db">&nbsp;Databases
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/sql&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/sql">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql">&nbsp;SQL
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/status&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/status">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Status" alt="Status" class="icon ic_s_status">&nbsp;Status
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/privileges&viewing_mode=server&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/privileges&viewing_mode=server">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="User accounts" alt="User accounts" class="icon ic_s_rights">&nbsp;User accounts
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/export&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/export">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Export" alt="Export" class="icon ic_b_export">&nbsp;Export
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/import&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/import">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Import" alt="Import" class="icon ic_b_import">&nbsp;Import
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/preferences/manage&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/preferences/manage">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Settings" alt="Settings" class="icon ic_b_tblops">&nbsp;Settings
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/replication&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/replication">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Replication" alt="Replication" class="icon ic_s_replication">&nbsp;Replication
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/variables&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/variables">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Variables" alt="Variables" class="icon ic_s_vars">&nbsp;Variables
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/collations&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/collations">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Charsets" alt="Charsets" class="icon ic_s_asci">&nbsp;Charsets
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/engines&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/engines">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Engines" alt="Engines" class="icon ic_b_engine">&nbsp;Engines
                           </a>
           </li>
                   <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link text-nowrap" href="index.php?route=/server/plugins&lang=en">
+=======
+            <a class="nav-link text-nowrap" href="index.php?route=/server/plugins">
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
               <img src="themes/dot.gif" title="Plugins" alt="Plugins" class="icon ic_b_plugin">&nbsp;Plugins
                           </a>
           </li>
@@ -799,7 +888,11 @@ $.extend(defaultValues, {
 </body>
 </html>
   </div>
+<<<<<<< HEAD
   <div id="selflink" class="print_ignore"><a href="index.php?route=%2Fexport&amp;server=1&amp;lang=en" title="Open new phpMyAdmin window" target="_blank" rel="noopener noreferrer"><img src="themes/dot.gif" title="Open new phpMyAdmin window" alt="Open new phpMyAdmin window" class="icon ic_window-new"></a></div>
+=======
+  <div id="selflink" class="print_ignore"><a href="index.php?route=%2Fexport&amp;server=1" title="Open new phpMyAdmin window" target="_blank" rel="noopener noreferrer"><img src="themes/dot.gif" title="Open new phpMyAdmin window" alt="Open new phpMyAdmin window" class="icon ic_window-new"></a></div>
+>>>>>>> a060dda30416b022fc9a8de8af84331107f09a01
 
   <div class="clearfloat" id="pma_errors">
     
