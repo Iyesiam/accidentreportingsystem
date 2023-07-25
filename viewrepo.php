@@ -6,6 +6,9 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 ?>
+
+<!-- Rest of the dashboard page HTML content goes here -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -149,157 +152,6 @@ if (!isset($_SESSION['username'])) {
           </div>
         </div>
       </div>
-      <div id="right-sidebar" class="settings-panel">
-        <i class="settings-close ti-close"></i>
-        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="setting-content">
-          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
-            <div class="add-items d-flex px-3 mb-0">
-              <form class="form w-100">
-                <div class="form-group d-flex">
-                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
-                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
-                </div>
-              </form>
-            </div>
-            <div class="list-wrapper px-3">
-              <ul class="d-flex flex-column-reverse todo-list">
-                <li>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="checkbox" type="checkbox">
-                      Team review meeting at 3.00 PM
-                    </label>
-                  </div>
-                  <i class="remove ti-close"></i>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="checkbox" type="checkbox">
-                      Prepare for presentation
-                    </label>
-                  </div>
-                  <i class="remove ti-close"></i>
-                </li>
-                <li>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="checkbox" type="checkbox">
-                      Resolve all the low priority tickets due today
-                    </label>
-                  </div>
-                  <i class="remove ti-close"></i>
-                </li>
-                <li class="completed">
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="checkbox" type="checkbox" checked>
-                      Schedule meeting for next week
-                    </label>
-                  </div>
-                  <i class="remove ti-close"></i>
-                </li>
-                <li class="completed">
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input class="checkbox" type="checkbox" checked>
-                      Project review
-                    </label>
-                  </div>
-                  <i class="remove ti-close"></i>
-                </li>
-              </ul>
-            </div>
-            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
-            <div class="events pt-4 px-3">
-              <div class="wrapper d-flex mb-2">
-                <i class="ti-control-record text-primary mr-2"></i>
-                <span>Feb 11 2018</span>
-              </div>
-              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
-              <p class="text-gray mb-0">The total number of sessions</p>
-            </div>
-            <div class="events pt-4 px-3">
-              <div class="wrapper d-flex mb-2">
-                <i class="ti-control-record text-primary mr-2"></i>
-                <span>Feb 7 2018</span>
-              </div>
-              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
-              <p class="text-gray mb-0 ">Call Sarah Graves</p>
-            </div>
-          </div>
-          <!-- To do section tab ends -->
-          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
-            <div class="d-flex align-items-center justify-content-between border-bottom">
-              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
-              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
-            </div>
-            <ul class="chat-list">
-              <li class="list active">
-                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
-                <div class="info">
-                  <p>Thomas Douglas</p>
-                  <p>Available</p>
-                </div>
-                <small class="text-muted my-auto">19 min</small>
-              </li>
-              <li class="list">
-                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
-                <div class="info">
-                  <div class="wrapper d-flex">
-                    <p>Catherine</p>
-                  </div>
-                  <p>Away</p>
-                </div>
-                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
-                <small class="text-muted my-auto">23 min</small>
-              </li>
-              <li class="list">
-                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
-                <div class="info">
-                  <p>Daniel Russell</p>
-                  <p>Available</p>
-                </div>
-                <small class="text-muted my-auto">14 min</small>
-              </li>
-              <li class="list">
-                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
-                <div class="info">
-                  <p>James Richardson</p>
-                  <p>Away</p>
-                </div>
-                <small class="text-muted my-auto">2 min</small>
-              </li>
-              <li class="list">
-                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
-                <div class="info">
-                  <p>Madeline Kennedy</p>
-                  <p>Available</p>
-                </div>
-                <small class="text-muted my-auto">5 min</small>
-              </li>
-              <li class="list">
-                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
-                <div class="info">
-                  <p>Sarah Graves</p>
-                  <p>Available</p>
-                </div>
-                <small class="text-muted my-auto">47 min</small>
-              </li>
-            </ul>
-          </div>
-          <!-- chat tab ends -->
-        </div>
-      </div>
-      <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
@@ -323,60 +175,199 @@ if (!isset($_SESSION['username'])) {
             </a>
           </li>-->
         </ul>
-      </nav>
-      <!-- partial -->
+      </nav><!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-md-12 grid-margin">
               <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Welcome</h3>
+                  <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                </div>
+                <div class="col-12 col-xl-4">
+                 <div class="justify-content-end d-flex">
+                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                  <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="mdi mdi-calendar"></i> Today (<?php echo date('d M Y'); ?>)
+                    </button>
+                  </div>
+                 </div>
+                </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img src="images/dashboard/people.svg" alt="people">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
+                      </div>
+                      <div class="ml-2">
+                        <h4 class="location font-weight-normal">Kigali</h4>
+                        <h6 class="font-weight-normal">Rwanda</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <?php
+// Establish a database connection
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'a_repo_sys';
+
+$conn = mysqli_connect($host, $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Query to count the accidents
+$sql = "SELECT COUNT(*) AS accidentCount FROM accidents";
+$result = mysqli_query($conn, $sql);
+
+// Check if the query was successful
+if ($result) {
+    // Fetch the result as an associative array
+    $row = mysqli_fetch_assoc($result);
+    $accidentCount = $row['accidentCount'];
+} else {
+    // Display an error message
+    echo "Error: Unable to count accidents." . mysqli_error($conn);
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+                <?php
+// Establish a database connection
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'a_repo_sys';
+
+$conn = mysqli_connect($host, $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Query to count the users
+$sql = "SELECT COUNT(*) AS userCount FROM users";
+$result = mysqli_query($conn, $sql);
+
+// Check if the query was successful
+if ($result) {
+    // Fetch the result as an associative array
+    $row = mysqli_fetch_assoc($result);
+    $userCount = $row['userCount'];
+} else {
+    // Display an error message
+    echo "Error: Unable to count users." . mysqli_error($conn);
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+              <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Report Accident</h4>
-                  <form class="forms-sample" action="insert_data.php" method="POST">
-                    <div class="form-group">
-                    <label for="exampleInputName1">Date and Time</label>
-                    <input type="datetime-local" class="form-control" name="datetime" id="exampleInputName1" placeholder="datetime" value="<?php echo date('Y-m-d\TH:i'); ?>" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword4">Location</label>
-                      <input type="text" class="form-control" name="location" id="location" placeholder="Location">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleSelectGender">Accident Severity</label>
-                      <select class="form-control" name="severity" id="exampleSelectGender">
-                        <option>Minor</option>
-                        <option>Moderate</option>
-                        <option>Severe</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputCity1">City</label>
-                      <input type="text" class="form-control" name="city" id="exampleInputCity1" placeholder="City">
-                    </div>
-                    <!--<div class="form-group">
-                      <label for="exampleInputFile">File Upload</label>
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="exampleInputFile" name="file">
-                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                        </div>
-                      </div>
-                    </div>-->
-                    <div class="form-group">
-                      <label for="exampleTextarea1">Description</label>
-                      <textarea class="form-control" name="description" id="exampleTextarea1"  rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-                  </form>
+                  <h4 class="card-title">Accidents Reported</h4>
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                            id
+                          </th>
+                          <th>
+                            datetime
+                          </th>
+                          <th>
+                            location
+                          </th>
+                          <th>
+                            severity
+                          </th>
+                          <th>
+                            City
+                          </th>
+                          <th>
+                            Description
+                          </th>
+                          <th>
+                            Update
+                          </th>
+                          <th>
+                            Delete
+                          </th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <?php
+              /// Establish a database connection
+// Establish a database connection
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'a_repo_sys';
+
+$conn = mysqli_connect($host, $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Retrieve the user ID from the session
+$userId = $_SESSION['user_id'];
+
+// Fetch data from the accidents table for the current user only
+$sql = "SELECT id, datetime, location, severity, city, description FROM accidents WHERE user_id = ?";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "i", $userId);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+
+// Check if any rows are returned
+if (mysqli_num_rows($result) > 0) {
+    // Loop through each row and display the data in the table
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['datetime'] . "</td>";
+        echo "<td>" . $row['location'] . "</td>";
+        echo "<td>" . $row['severity'] . "</td>";
+        echo "<td>" . $row['city'] . "</td>";
+        echo "<td>" . $row['description'] . "</td>";
+        echo "<td><a href='update_acc.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm mr-2'>Update</a></td>"; // Update button with link to update.php
+        echo "<td><a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this record?\")'>Delete</a></td>";
+
+        echo "</tr>";
+    }
+} else {
+    echo "<tr><td colspan='5'>No data found</td></tr>";
+}
+
+// Close the database connection
+mysqli_close($conn);
+
+              ?>
+              
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
               
               
+              </div>
             </div>
-          </div>
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->

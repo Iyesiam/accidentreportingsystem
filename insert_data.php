@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Database configuration
 $servername = "localhost";
 $username = "root";
@@ -9,8 +11,8 @@ $dbname = "a_repo_sys";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 // Get the form data
@@ -20,20 +22,26 @@ $severity = $_POST['severity'];
 $city = $_POST['city'];
 $description = $_POST['description'];
 
+// Get the user ID from the session
+$userID = $_SESSION['user_id'];
+
 // Check if any of the fields are empty
 if (!empty($datetime) && !empty($location) && !empty($severity) && !empty($city) && !empty($description)) {
     // Prepare and execute the SQL query
-    $sql = "INSERT INTO accidents (datetime, location, severity, city, description) VALUES ('$datetime', '$location', '$severity', '$city', '$description')";
-    if ($conn->query($sql) === TRUE) {
-        header("location: dashboard.php");
+    $sql = "INSERT INTO accidents (datetime, location, severity, city, description, user_id) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "sssssi", $datetime, $location, $severity, $city, $description, $userID);
+
+    if (mysqli_stmt_execute($stmt)) {
+        header("location: viewrepo.php");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . mysqli_error($conn);
     }
 } else {
     echo '<script>alert("Error: All fields are required. Please fill in all the required fields."); window.location.href = "dashboard.php";</script>';
 }
 
 // Close the database connection
-$conn->close();
+mysqli_close($conn);
 ?>

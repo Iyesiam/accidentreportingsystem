@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare the SQL statement to retrieve the user from the database
-    $query = "SELECT * FROM users WHERE username = ? AND password = ?";
+    $query = "SELECT id, username, role FROM users WHERE username = ? AND password = ?";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, "ss", $username, $password);
     mysqli_stmt_execute($stmt);
@@ -28,10 +28,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check if the query returns any rows
     if (mysqli_num_rows($result) > 0) {
-        // Authentication successful
-        $_SESSION['username'] = $username;
-        header('Location: dashboard.php');
-        exit();
+        // Authentication successful, retrieve user data
+        $userData = mysqli_fetch_assoc($result);
+        
+        // Store the user ID and role in the session
+        $_SESSION['user_id'] = $userData['id'];
+        $_SESSION['username'] = $userData['username'];
+        $_SESSION['role'] = $userData['role'];
+
+        // Redirect to the appropriate dashboard based on user role (admin or user)
+        if ($userData['role'] == 'admin') {
+            header('Location:dashboard.php');
+            exit();
+        } else {
+            header('Location: repo_acc_form.php');
+            exit();
+        }
     } else {
         // Authentication failed
         echo 'Invalid username or password';

@@ -5,8 +5,7 @@ if (!isset($_SESSION['username'])) {
     header('Location: login_form.php');
     exit();
 }
-?>
-<?php
+
 $host = 'localhost';
 $username = 'root';
 $password = '';
@@ -19,23 +18,70 @@ if (!$conn) {
 
 $id = $_GET['id'];
 
-// Retrieve the user data for prepopulation
-$sql = "SELECT * FROM users WHERE id = $id";
-$result = mysqli_query($conn, $sql);
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get the updated form data
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
 
-if (mysqli_num_rows($result) > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $email = $row['email'];
-    $username = $row['username'];
-    $phone = $row['phone'];
-    $password = $row['password'];
+    // Prepare and execute the SQL query
+    $updateSql = "UPDATE users SET email=?, username=?, phone=?, password=? WHERE id=?";
+    $stmt = mysqli_prepare($conn, $updateSql);
+
+    if ($stmt) {
+        // Bind the parameters and execute the statement
+        mysqli_stmt_bind_param($stmt, "ssssi", $email, $username, $phone, $password, $id);
+
+        if (mysqli_stmt_execute($stmt)) {
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            echo "Error updating user: " . mysqli_error($conn);
+        }
+
+        // Close the statement
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "Error preparing the statement: " . mysqli_error($conn);
+    }
+}
+
+// Retrieve the user data for prepopulation
+$sql = "SELECT * FROM users WHERE id = ?";
+$stmt = mysqli_prepare($conn, $sql);
+
+if ($stmt) {
+    // Bind the parameter and execute the statement
+    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_execute($stmt);
+
+    // Get the result
+    $result = mysqli_stmt_get_result($stmt);
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $email = $row['email'];
+        $username = $row['username'];
+        $phone = $row['phone'];
+        $password = $row['password'];
+    } else {
+        echo "User not found.";
+        exit();
+    }
+
+    // Close the statement
+    mysqli_stmt_close($stmt);
 } else {
-    echo "User not found.";
+    echo "Error preparing the statement: " . mysqli_error($conn);
     exit();
 }
 
 mysqli_close($conn);
 ?>
+
+
       <!DOCTYPE html>
 <html lang="en">
 
@@ -331,7 +377,7 @@ mysqli_close($conn);
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+     <!-- <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
@@ -352,7 +398,7 @@ mysqli_close($conn);
             </a>
           </li>
         </ul>
-      </nav>
+      </nav>-->
       <!-- partial -->
         <div class="content-wrapper">
           <div class="row">

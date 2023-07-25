@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login_form.php');
+    exit();
+}
+
 $host = 'localhost';
 $username = 'root';
 $password = '';
@@ -20,6 +28,14 @@ $result = mysqli_stmt_get_result($stmt);
 
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
+
+    // Check if the user ID matches the user ID associated with the accident
+    // If the logged-in user is not an admin and doesn't match the user ID, redirect them to viewrepo.php
+    if ($_SESSION['role'] !== 'admin' && $row['user_id'] !== $_SESSION['user_id']) {
+        echo("Not Allowed To Edit Anything Here!!!");
+        exit();
+    }
+
     $datetime = $row['datetime'];
     $location = $row['location'];
     $severity = $row['severity'];
@@ -44,7 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_bind_param($stmt, "sssssi", $updatedDatetime, $updatedLocation, $updatedSeverity, $updatedCity, $updatedDescription, $id);
 
     if (mysqli_stmt_execute($stmt)) {
-        header("Location: dashboard.php");
+        // Redirect to the appropriate page based on the user's role
+        if ($_SESSION['role'] === 'admin') {
+            header("Location: dashboard.php");
+        } else {
+            header("Location: viewrepo.php");
+        }
         exit();
     } else {
         echo "Error updating accident: " . mysqli_error($conn);
@@ -53,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 mysqli_close($conn);
 ?>
+
 
 
 
@@ -351,7 +373,7 @@ mysqli_close($conn);
       </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <!--<nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
@@ -372,7 +394,7 @@ mysqli_close($conn);
             </a>
           </li>
         </ul>
-      </nav>
+      </nav>-->
       <!-- partial -->
         <div class="content-wrapper">
           <div class="row">
